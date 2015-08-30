@@ -1,0 +1,49 @@
+<ion-view view-title="정기배달계획">
+  <ion-content>
+
+	<div class="card list">
+	<div class="item item-divider">
+		월요일 금요일 <span style="float:right;">64,000원</span>
+	</div>
+  	<a class="item item-thumbnail-left item-icon-right" href="#">
+		<img src="img/koreanmelon.jpg">
+		<i class="icon ion-chevron-right icon-accessory"></i>
+		<h2>제철과일 참외 1개</h2>
+		<p>3,000원 x 8회</p>
+    </a>
+  	<a class="item item-thumbnail-left item-icon-right" href="#">
+      <img src="img/mango.png">
+		<i class="icon ion-chevron-right icon-accessory"></i>
+      <h2>수입과일 망고 1개</h2>
+      <p>5,000원 x 8회</p>
+    </a>
+	</div>
+
+	<div class="card list muted">
+		<div class="item item-divider">
+			수요일 <span style="float:right;">12,000원</span>
+		</div>
+		<a class="item item-thumbnail-left item-icon-right" href="#">
+		  <img src="img/koreanmelon.jpg">
+			<i class="icon ion-chevron-right icon-accessory"></i>
+		  <h2>제철과일 참외 1개</h2>
+		  <p>3,000원 x 4회</p>
+		</a>
+		<div class="item item-divider bg-pink">
+			회당 최소 배송가능 가격은 3500원입니다.
+		</div>    
+	</div>
+	<div class="padding">
+		<label class="item item-input">
+		  <span class="input-label">시작일</span>
+		  <input type="date" value='2015-09-12'>
+		</label>
+		<button class="button button-block button-light" ng-click="openModal()">
+			배달일상세수정하기
+		</button>
+		<button class="button button-block button-positive">
+			합계 64,000원 카트담기
+		</button>
+	</div>
+  </ion-content>
+</ion-view>
