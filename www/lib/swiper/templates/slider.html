@@ -1,0 +1,80 @@
+<div class="row" style="padding:0px;">
+	<div class="col col-33" style="height:120px;">
+		<ks-swiper-container 
+			swiper="swiper1"
+			on-ready="onReadySwiper(swiper, 1)"
+			show-nav-buttons="false" 
+			slides-per-view="3" 
+			space-between="5" 
+			pagination-clickable="false"
+			direction="vertical"	
+			override-parameters="{
+				centeredSlides: true,
+				freeMode : true, 
+				freeModeSticky: true,
+			}"
+
+		>
+			<ks-swiper-slide class="swiper-slide"ng-repeat="n in ::['AM','PM']">
+				{{n}}
+			</ks-swiper-slide>
+		</ks-swiper-container>	
+			
+	</div>
+	<div class="col col-33" style="height:120px;">
+		<ks-swiper-container 
+			on-ready="onReadySwiper(swiper, 2)"
+			swiper="swiper2"
+			loop="true" 
+			show-nav-buttons="false" 
+			slides-per-view="5" 
+			pagination-is-active="true"
+			pagination-clickable="false"
+			direction="vertical"	
+			override-parameters="{
+				freeMode : true, 
+				freeModeSticky: true,
+				effect: 'coverflow',
+				coverflow: {
+				  rotate: -20,
+				  stretch: 0,
+				  depth: 50,
+				  modifier: 1,
+				  slideShadows : false,
+				}
+			}"
+		>
+			<ks-swiper-slide class="swiper-slide" ng-repeat="s in ::[1,2,3,4,5,6,7,8,9,10,11,12]">
+				{{s}}
+			</ks-swiper-slide>
+		</ks-swiper-container>	
+	</div>
+	<div class="col col-33" style="height:120px;">
+		<ks-swiper-container 
+			on-ready="onReadySwiper(swiper, 3)"
+			swiper="swiper3"
+			loop="true" 
+			show-nav-buttons="false" 
+			slides-per-view="5" 
+			pagination-is-active="true"
+			pagination-clickable="false"
+			direction="vertical"	
+			override-parameters="{
+				freeMode : true, 
+				freeModeSticky: true,
+				effect: 'coverflow',
+				coverflow: {
+				  rotate: -20,
+				  stretch: 0,
+				  depth: 50,
+				  modifier: 1,
+				  slideShadows : false,
+				},
+			}"
+		>
+			<ks-swiper-slide class="swiper-slide" ng-repeat="s in :: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59]">
+				{{s}}
+			</ks-swiper-slide>
+		</ks-swiper-container>	
+	</div>
+</div>

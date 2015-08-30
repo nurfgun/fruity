@@ -1,0 +1,72 @@
+<ion-modal-view>
+	<ion-header-bar>
+ 	     <button
+ 	     	class="button button-clear button-assertive"
+ 	     	ng-click="cancelModal()" 
+	     >취소</button>
+
+     	<h1 class="title">정기배달하기</h1>
+		<button 
+			class="button button-clear button-assertive"
+		><b>담기</b></button>
+      
+	</ion-header-bar>
+    <ion-content>
+
+
+		<div class="card">
+			<div class="item item-text-wrap">
+				배달을 원하지 않는 날을 빼 배달 일정을 미룰 수 있습니다. 총 배달하는 일수는 유지됩니다.	
+			</div>
+  
+			<ion-list show-delete="true">
+
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					9월 14일 금요일 
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					9월 21일 월요일 
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					9월 25일 금요일
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					9월 28일 월요일
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					10월 2일 금요일
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					10월 5일 월요일
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					10월 9일 금요일
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+				<ion-item class="item-remove-animate">
+					<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+					10월 12일 월요일
+					<span style="float:right;margin-right:10px;">8,000원</span>
+				</ion-item>
+			</ion-list>	
+		</div>
+		<button class="button button-light button-block">
+		  초기화
+		</button>
+
+	
+	</ion-content>
+</ion-modal-view>

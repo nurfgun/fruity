@@ -1,0 +1,52 @@
+<ion-view view-title="장바구니">
+  <ion-nav-buttons side="left">
+      <a class="button button-icon icon ion-ios-minus-outline" ng-click="toggleShowDelete()">
+      	수정
+      </a>
+    </ion-nav-buttons>
+
+
+  <ion-content>
+<div class="card">
+		
+	<ion-list show-delete="showDelete">
+	<ion-item class="item-remove-animate">
+		<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+		정기배달신청<span style="float:right;margin-right:10px;">64,000원</span>
+	</ion-item>
+  	<a class="item item-thumbnail-left item-icon-right" href="#/tab/cart/1">
+		<img src="img/koreanmelon.jpg">
+		<i class="icon ion-chevron-right icon-accessory"></i>
+		<h2>제철과일 참외외 1개</h2>
+		<p>주 2회씩(화, 목) 총 8회</p>
+		<p>15년 9월 15일부터 10월 22일까지</p>
+    </a>
+  	</ion-list>
+	
+</div>
+
+<div class="list card">
+	<ion-list show-delete="showDelete">
+	<ion-item class="item-remove-animate">
+		<ion-delete-button class="ion-minus-circled"></ion-delete-button>		
+		일회구매<span style="float:right;margin-right:10px;">10,000원</span>
+	</ion-item>
+  	<a class="item item-thumbnail-left item-icon-right" href="#/tab/cart/2">
+		<img src="img/apples.jpeg">
+		<i class="icon ion-chevron-right icon-accessory"></i>
+		<h2>하우스과일 사과 2박스</h2>
+		<p>10,000원 x 2회</p>
+    </a>
+    </ion-list>
+</div>
+
+
+<div class="padding">
+	<button class="button button-block button-positive">
+		합계 74,000원 구매하기
+	</button>
+</div>
+
+
+  </ion-content>
+</ion-view>
