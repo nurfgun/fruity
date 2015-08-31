@@ -8,14 +8,15 @@
      	<h1 class="title">정기배달하기</h1>
 		<button 
 			class="button button-clear button-assertive"
-		><b>담기</b></button>
+			ng-click="goPlanner()"
+		><b>카트에담기</b></button>
       
     </ion-header-bar>
     <ion-content>
 <div class="card">
   <div class="item item-text-wrap">
-  	정기배달 단위는 4주이며 배달이 가능한 최소가격은 각회 3500원 이상입니다.<br/>
-  	요일별 과일내용은 정기배달탭에서 확인하세요.
+  	배달이 가능한 최소가격은 각회 5000원 이상입니다.<br/>
+  	요일별 과일내용은 정기배달탭에서 확인하실 수 있습니다.
   </div>
 </div>
 
@@ -23,7 +24,7 @@
   <label class="item item-radio">
     <input type="radio" name="group" ng-model="days" value='0'>
     <div class="item-content">
-      화 목(8회)에 담기
+      월 금(8회)에 담기
     </div>
     <i class="radio-icon ion-checkmark"></i>
   </label>
@@ -34,45 +35,6 @@
     </div>
     <i class="radio-icon ion-checkmark"></i>
   </label>
-  <label class="item item-radio">
-    <input type="radio" name="group" ng-model="days" value='2'>
-    <div class="item-content">
-    	요일직접고르기
-    </div>
-    <i class="radio-icon ion-checkmark"></i>
-  </label>
-  <div class="list" ng-show="days == 2">
-  <li class="item item-checkbox">
-     <label class="checkbox">
-       <input type="checkbox">
-     </label>
-	월요일		
-  </li>
-  <li class="item item-checkbox">
-     <label class="checkbox">
-       <input type="checkbox">
-     </label>
-	화요일		
-  </li>
-  <li class="item item-checkbox">
-     <label class="checkbox">
-       <input type="checkbox">
-     </label>
-	수요일		
-  </li>
-  <li class="item item-checkbox">
-     <label class="checkbox">
-       <input type="checkbox">
-     </label>
-	목요일		
-  </li>
-  <li class="item item-checkbox">
-     <label class="checkbox">
-       <input type="checkbox">
-     </label>
-	금요일		
-  </li>
-  </div>
 
 
 </ul>
