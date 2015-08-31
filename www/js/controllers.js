@@ -5,9 +5,12 @@ angular.module('starter.controllers', [])
 	};
 
 })
-.controller('ShowroomCtrl', function($scope) {
+.controller('ShowroomCtrl', function($scope, Fruits) {
+	$scope.fruits = Fruits.sortByType();
+
 })
-.controller('ShowroomDetailCtrl', function($scope, $ionicModal) {
+.controller('ShowroomDetailCtrl', function($scope, $ionicModal, $stateParams, $state, Fruits) {
+
   $ionicModal.fromTemplateUrl('templates/modal-plan.html', {
     scope: $scope,
     animation: 'slide-in-up'
@@ -20,18 +23,14 @@ angular.module('starter.controllers', [])
   $scope.cancelModal = function() {
     $scope.modal.hide();
   };
-  //Cleanup the modal when we're done with it!
-  $scope.$on('$destroy', function() {
-    $scope.modal.remove();
-  });
-  // Execute action on hide modal
-  $scope.$on('modal.hidden', function() {
-    // Execute action
-  });
-  // Execute action on remove modal
-  $scope.$on('modal.removed', function() {
-    // Execute action
-  });
+	
+	$scope.fruit = Fruits.get($stateParams.fruitId);
+	$scope.goPlanner = function(){
+		console.log('clicked');
+		$scope.modal.hide();
+		$state.go('tab.plans');
+	};
+
 })
 
 .controller('PlansCtrl', function($scope, $ionicModal) {
@@ -47,29 +46,21 @@ angular.module('starter.controllers', [])
   $scope.cancelModal = function() {
     $scope.modal.hide();
   };
-  //Cleanup the modal when we're done with it!
   $scope.$on('$destroy', function() {
     $scope.modal.remove();
   });
-  // Execute action on hide modal
-  $scope.$on('modal.hidden', function() {
-    // Execute action
-  });
-  // Execute action on remove modal
-  $scope.$on('modal.removed', function() {
-    // Execute action
-  });
+  
 })
 
 .controller('CartCtrl', function($scope) {
 	$scope.showDelete = false;
 	$scope.toggleShowDelete = function(){
 		$scope.showDelete = !$scope.showDelete;
-		console.log($scope.showDelete);
 	};
 
 })
-.controller('CartDetailCtrl', function($scope) {
+.controller('CartDetailCtrl', function($scope, $stateParams, Fruits) {
+	$scope.fruit = Fruits.get($stateParams.itemId);
 })
 
 .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
