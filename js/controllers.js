@@ -56,7 +56,6 @@ angular.module('starter.controllers', [])
 	$scope.showDelete = false;
 	$scope.toggleShowDelete = function(){
 		$scope.showDelete = !$scope.showDelete;
-		console.log($scope.showDelete);
 	};
 
 })
